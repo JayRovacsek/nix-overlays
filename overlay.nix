@@ -1,9 +1,9 @@
 self: super:
 let
   version = "3.0.2";
-  pname = "dockutil3";
+  pname = "dockutil";
 in {
-  dockutil = super.pkgs.stdenv.mkDerivation {
+  dockutil = super.dockutil.overrideAttrs (old: {
     inherit version;
     inherit pname;
 
@@ -33,5 +33,5 @@ in {
       runHook postInstall
       runHook postInstall
     '';
-  };
+  });
 }
