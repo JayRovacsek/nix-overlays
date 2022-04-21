@@ -1,9 +1,9 @@
 self: super:
 let
   version = "3.0.2";
-  pname = "dockutil";
+  pname = "dockutil3";
 in {
-  dockutil = super.dockutil.override {
+  dockutil = super.pkgs.stdenv.mkDerivation {
     inherit version;
     inherit pname;
 
