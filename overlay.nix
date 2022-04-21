@@ -3,7 +3,7 @@ let
   version = "3.0.2";
   pname = "dockutil";
 in {
-  dockutil = super.dockutil.overrideAttrs (old: {
+  dockutil = super.dockutil.overrideAttrs (old: rec {
     inherit version;
     inherit pname;
 
