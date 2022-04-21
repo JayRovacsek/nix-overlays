@@ -1,7 +1,9 @@
 {
-  description = "An overlay to enable dockutils on darwin x86";
+  description = "My Overlays";
 
-  inputs = { nixpkgs.url = "github:NixOS/nixpkgs/master"; };
+  inputs = { nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable"; };
 
-  outputs = { self, nixpkgs }@inputs: { overlay = import ./overlay.nix; };
+  outputs = { self, nixpkgs }@inputs: {
+    dockutil = import ./overlays/dockutil.nix;
+  };
 }
