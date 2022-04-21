@@ -3,7 +3,7 @@ let
   version = "3.0.2";
   pname = "dockutil";
 in {
-  dockutil = super.dockutil.overrideAttrs (old: rec {
+  dockutil = super.dockutil.overrideAttrs (old: {
     inherit version;
     inherit pname;
 
@@ -23,14 +23,10 @@ in {
 
     installPhase = ''
       runHook preInstall
-      runHook preInstall
       mkdir -p $out/bin
-      mkdir -p $out/bin
-      install -Dm755 scripts/dockutil -t $out/bin
       mkdir -p $out/usr/local/bin
       install -Dm755 usr/local/bin/dockutil -t $out/usr/local/bin
       ln -rs $out/usr/local/bin/dockutil $out/bin/dockutil
-      runHook postInstall
       runHook postInstall
     '';
   });
