@@ -3,7 +3,7 @@ let
   version = "3.0.2";
   pname = "dockutil";
 in {
-  dockutil = super.stdenv.mkDerivation {
+  dockutil = super.dockutil.override {
     inherit version;
     inherit pname;
 
