@@ -7,7 +7,7 @@ in {
     inherit version;
     inherit pname;
 
-    src = fetchurl {
+    src = super.fetchurl {
       url =
         "https://github.com/kcrawford/dockutil/releases/download/${version}/dockutil-${version}.pkg";
       sha256 =
