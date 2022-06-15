@@ -6,5 +6,6 @@
   outputs = { self, nixpkgs }@inputs: {
     dockutil = import ./overlays/dockutil.nix;
     git = import ./overlays/git.nix;
+    minecraft-server = import ./overlays/minecraft-server.nix;
   };
 }
