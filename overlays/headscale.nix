@@ -11,7 +11,7 @@ in {
       owner = "juanfont";
       repo = "headscale";
       rev = "v${version}";
-      sha256 = "";
+      sha256 = "sha256-y9DGQJps/Hah/gVehOE47eIgYZTz/vBdB8RRBA/mXpM=";
     };
 
     vendorSha256 = "";
