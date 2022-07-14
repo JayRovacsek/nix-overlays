@@ -11,6 +11,6 @@ in {
       sha256 = "sha256-y9DGQJps/Hah/gVehOE47eIgYZTz/vBdB8RRBA/mXpM=";
     };
 
-    vendorSha256 = super.lib.fakeHash;
+    vendorSha256 = "sha256-T6rH+aqofFmCPxDfoA5xd3kNUJeZkT4GRyuFEnenps8=";
   });
 }
