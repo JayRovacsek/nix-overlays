@@ -5,6 +5,6 @@
 
   outputs = { self, nixpkgs }@inputs: {
     dockutil = import ./overlays/dockutil.nix;
-    git = import ./overlays/git.nix;
+    headscale = import ./overlays/headscale.nix;
   };
 }
